@@ -1,0 +1,42 @@
+html{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.category-items-list{
+    list-style: none;
+    padding: 0px;
+}
+.category-items-list li{
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 0px;
+}
+.category-items-list li a{
+    text-decoration: none;
+    color: black;
+}
+.category-items-list li a:hover{
+    color: blue;
+}
+.category-title{
+    text-transform: uppercase;
+    opacity: 0.8;
+    font-weight: 100;
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+@media (orientation: landscape) {
+    main {
+        display: grid;
+        grid-template-columns: repeat(6,1fr);
+    }
+}
+
+@media (orientation: portrait) {
+    main {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: 2rem;
+    }
+}
