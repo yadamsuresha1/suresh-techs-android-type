@@ -26,17 +26,79 @@ html{
     letter-spacing: 1px;
 }
 
+.socialmedia a {
+    text-decoration: none;
+    color: black;
+}
+
+.socialmedia a:hover {
+    color: blue;
+}
+
 @media (orientation: landscape) {
-    main {
+    .categories {
         display: grid;
         grid-template-columns: repeat(6,1fr);
     }
 }
 
 @media (orientation: portrait) {
-    main {
+    .categories {
         display: grid;
         grid-template-columns: 1fr;
         margin: 2rem;
     }
+}
+
+@media (orientation: landscape){
+    .socialmedia {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-areas: "twitter youtube linkedin";
+        column-gap: 5rem;
+        padding: 20px 0px;
+        font-size: 0.85rem;
+    }
+}
+
+@media (orientation: portrait){
+    .socialmedia {
+        display: grid;
+        padding: 20px 0px;
+        font-size: 0.85rem;
+    }
+    .socialmedia #twitter,#youtube,#linkedin{
+        display: flex;
+        flex-direction: column;
+        min-height: 250px;
+        align-items: center;
+        justify-content: center;
+        padding: 0px 3.5rem;
+    }
+}
+
+.socialmedia #twitter,#youtube,#linkedin{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 3.5rem;
+}
+.socialmedia img{
+    width: 3rem;
+    height: 3rem;
+}
+a h4{
+    margin: 0.5rem 0px;
+}
+.socialmedia a,p{
+    text-align: center;
+    margin: 0px;
+}
+#inspiredby{
+    text-align: left;
+}
+
+hr{
+    opacity: 0.3;
 }
