@@ -40,7 +40,7 @@ body{
 @media (orientation: landscape) {
     .categories {
         display: grid;
-        grid-template-columns: repeat(6,1fr);
+        grid-template-columns: repeat(5,1fr);
         margin: 0px 2rem;
     }
 }
@@ -121,9 +121,8 @@ hr{
 
 .visit-our-community h3{
     font-size: 2rem;
-    color: #073042;
-
 }
+
 .visit-our-community p{
     font-size: 0.8rem;
 }
@@ -141,6 +140,7 @@ hr{
         grid-template-columns: repeat(3,1fr);
         column-gap: 2rem;
         margin: 4rem 3rem;
+        color: #073042;
         row-gap: 1rem;
     }
 }
@@ -161,11 +161,13 @@ hr{
     cursor: pointer;
     box-shadow: 1px 4px 5px rgba(0, 0, 0, 0.2);
     transition: box-shadow 0.2s ease-in;
+    background-color: #073042;
+    color: wheat;
 }
 
 .community-container:hover a{
     text-decoration: underline;
-    color: black;
+    color: white;
 }
 .community-container a{
     padding: 1rem 0px;
@@ -239,12 +241,24 @@ nav ul li{
     border-bottom: 3px solid rgb(99, 99, 99);
     cursor: pointer;
 }
-.main-text-image-container{
-    height: 30rem;
-    background-color: #073042;
-    margin-top: 4rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+
+@media (orientation:landscape) {
+    .main-text-image-container{
+        height: 30rem;
+        background-color: #073042;
+        margin-top: 4rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }        
+}
+
+@media (orientation:portrait) {
+    .main-text-image-container{
+        background-color: #073042;
+        margin-top: 4rem;
+        display: grid;
+        text-align: center;
+    }        
 }
 
 .main-text-image-container h1 {
@@ -273,4 +287,63 @@ nav ul li{
 .search-icon-container img{
     position: absolute;
     top: 50px;
+}
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 0px;
+}
+
+footer ul {
+    list-style-type: none;
+    display: flex;
+    padding-inline-start: 2rem;
+}
+footer a{
+    text-decoration: none;
+    color: black;
+}
+footer li {
+    padding: 0px 5px;
+}
+footer ul li:not(:last-child)::after {
+    content: ' | ';
+}
+
+.round-button-like, .round-button-share, .round-button-subscribe {
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    margin: 0px 0.5rem;
+    font-size: 1rem;
+    box-shadow: 0 1px 2px 2px rgba(0, 0, 0, 0.2);
+}
+.round-button-like {
+    background-color: #0b0e0d;
+    color: rgb(255, 255, 255);
+}
+
+.round-button-share {
+    background-color: rgb(135, 225, 108);
+    color: rgb(255, 255, 255);
+}
+
+.round-button-subscribe {
+    background-color: rgb(223, 31, 31);
+    color: rgb(255, 255, 255);
+}
+
+.round-button-like:hover,.round-button-share:hover,.round-button-subscribe:hover{
+    background-color: rgb(194, 190, 190);
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    transition: background-color 0.1s ease-in;
+}
+.bottom-buttons{
+    margin-left: 3rem;
 }
