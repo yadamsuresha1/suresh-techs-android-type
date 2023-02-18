@@ -242,6 +242,16 @@ nav ul li{
     cursor: pointer;
 }
 
+/* @media screen and (max-width:500px) and (min-width:300px){
+    .main-text-image-container{
+        height: 30rem;
+        background-color: #073042;
+        margin-top: 4rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }  
+} */
+
 @media (orientation:landscape) {
     .main-text-image-container{
         height: 30rem;
